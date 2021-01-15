@@ -15,10 +15,6 @@ def authorize():
         abort(
             401,"Unauthorized access",
         )
-    
-@app.route('/')
-def homepage():
-    return render_template("index.html")
 
 def parse():
     """Parse data from the client"""
