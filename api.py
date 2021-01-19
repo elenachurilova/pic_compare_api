@@ -22,20 +22,22 @@ def save(url):
     return filename
 
 def download(urls):
-    """Parse images from given URLs, return list of two Bytes objects"""
+    """Download images from given URLs, return a list of their names"""
     return list(map(save, urls))
 
 def compare(filenames):
-    """Compare two given images with diffimg library, return difference percent as float"""
+    """Compare two given images, return difference percentage"""
     filename1, filename2 = filenames
     return round(image_diff_percent(filename1, filename2),2)
 
 def authorize(api_key):
+    """Check authorization key"""
     if api_key != secret_key:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
 @app.post('/api/compare')
 def index(links: Payload):
+    """Take POST request and send a response (image diff percentage)"""
     authorize(links.api_key)
     files = download([links.image1, links.image2])
     return {"percent_difference" : compare(files)}
