@@ -1,8 +1,0 @@
-POST http://localhost:5000/api/compare.json
-Content-Type: application/json
-Authorization: Bearer 123
-
-{
-        "image_one" : "https://www.memphisveterinaryspecialists.com/files/best-breeds-of-house-cats-memphis-vet-1-1.jpeg",
-        "image_two" : "https://www.memphisveterinaryspecialists.com/files/best-breeds-of-house-cats-memphis-vet-1-1.jpeg"
-    }

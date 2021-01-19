@@ -7,6 +7,7 @@
 ### Create and activate virtual environment
 
 ```virtualenv env```
+
 ```source env/bin/activate```
 
 ### Install dependencies 

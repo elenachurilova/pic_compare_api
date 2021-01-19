@@ -1,0 +1,8 @@
+POST http://127.0.0.1:8000/api/compare
+
+{
+    "image1" : "https://raw.githubusercontent.com/datenhahn/imgcompare/master/tests/testimages/black.jpg",
+    "image2" : "https://raw.githubusercontent.com/datenhahn/imgcompare/master/tests/testimages/half_black_white.jpg",
+    "api_key" : "kmrhn74zgzcq4nqb"
+}
+

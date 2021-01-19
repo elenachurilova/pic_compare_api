@@ -1,2 +1,4 @@
 *env*
 *.DS_Store*
+*secret*
+*__pycache__*
